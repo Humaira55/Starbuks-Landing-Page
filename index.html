@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Starbucks Ice-Cream</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+                <img src="./images/logo.png" alt="">
+                <ul>
+                    <li> <a href="#">Home</a></li>
+                    <li> <a href="#">Services</a></li>
+                    <li> <a href="#">Contact Us</a></li>
+                    <li> <a href="#">About Us</a></li>   
+                </ul>
+        </header>
+        
+    </section>
+
+    <section>
+        <div class="content">
+            <div class="content-wrap">
+                <div class="text-box">
+                    <h1>It's not just Coffee <br> It's <span>Starbucks</span></h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non maiores sunt accusantium saepe
+                        omnis aliquam amet ipsam quaerat alias quo, animi, harum laboriosam, voluptates obcaecati 
+                        quia quidem iure labore ullam.</p>
+                        <button>Learn More</button>
+                </div>
+                
+                <div class="img-box">
+                    <img src="./images/img1.png" alt="" class="starbucks">
+                </div>
+                <div class="social">
+                    <ul>
+                        <li><a href="#"><img src="./images/facebook1.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/instagram.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/twitter.png" alt=""></a></li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+            <div class="thumb">
+                <ul>
+                    <li> <img src="./images/img1.png" onclick="imgSlider('./images/img1.png'); changeCircleColor('#017143')"></li>
+                    <li> <img src="./images/img2.png" onclick="imgSlider('./images/img2.png'); changeCircleColor('#d49bae')"></li>
+                    <li> <img src="./images/img3.png"   onclick="imgSlider('./images/img3.png'); changeCircleColor('#795548')"></li>
+                </ul>
+            </div>
+        </div>  
+    </section>
+
+    <script >
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color)
+        {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+    
+</body>
+</html>
+
